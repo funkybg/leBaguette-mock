@@ -48,7 +48,7 @@ limitations under the License
   <div class="layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
     <header class="header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Server status</span>
+        <span class="mdl-layout-title">Account setup</span>
         <div class="mdl-layout-spacer"></div>
         <label id="logout" class="mdl-button mdl-js-button mdl-button--icon" for="search">
           <a href="/logout"><i class="material-icons">power_settings_new</i></a>
@@ -77,7 +77,87 @@ limitations under the License
     </div>
     <main class="mdl-layout__content mdl-color--grey-100">
       <div class="mdl-grid container">
-        div.mdl-grid
+        <div class="cards mdl-cell mdl-cell--12-col mdl-grid">
+          <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col-tablet mdl-cell--3-col">
+            <div class="mdl-card__title mdl-card--expand card-profile">
+              <div class="mdl-layout-spacer"></div>
+              <img src="../static/images/ninja.png" alt="profile image" class="card-profile--avatar mdl-shadow--2dp">
+              <div class="mdl-layout-spacer"></div>
+            </div>
+            <div class="mdl-card__supporting-text card-profile--stats mdl-grid">
+              <div class="mdl-cell mdl-cell--12-col separator"></div>
+              <div class="mdl-cell mdl-cell--12-col mdl-typography--text-center">
+                <span class="mdl-typography--title">{{ request.user.first_name }} {{ request.user.last_name }}</span>
+              </div>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple">
+                Save profile
+              <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 272.026px; height: 272.026px; transform: translate(-50%, -50%) translate(78px, 16px);"></span></span></a>
+            </div>
+          </div>
+          <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col-tablet mdl-cell--9-col">
+            <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+              <div class="mdl-tabs__tab-bar">
+                <a href="#profile-panel" class="mdl-tabs__tab is-active">Profile</a>
+                <a href="#password-panel" class="mdl-tabs__tab">Password</a>
+              </div>
+              <div class="mdl-tabs__panel is-active mdl-grid mdl-cell mdl-cell--12-col" id="profile-panel">
+                <div class="input-profile">
+                  <form class="input-profile" action="#">
+                    <div class="mdl-textfield mdl-js-textfield">
+                      <input class="mdl-textfield__input" type="text" id="first_name">
+                      <label class="mdl-textfield__label" for="sample1">First name...</label>
+                    </div>
+                  </form>
+                </div>
+                <div class="input-profile">
+                  <form class="input-profile" action="#">
+                    <div class="mdl-textfield mdl-js-textfield">
+                      <input class="mdl-textfield__input" type="text" id="last_name">
+                      <label class="mdl-textfield__label" for="sample1">Last name...</label>
+                    </div>
+                  </form>
+                </div>
+                <div class="input-profile">
+                  <form class="input-profile" action="#">
+                    <div class="mdl-textfield mdl-js-textfield">
+                      <input class="mdl-textfield__input" type="text" id="email">
+                      <label class="mdl-textfield__label" for="sample1">e-mail...</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="mdl-tabs__panel mdl-grid" id="password-panel">
+                <div class="input-profile">
+                  <form class="input-profile" action="#">
+                    <div class="mdl-textfield mdl-js-textfield">
+                      <input class="mdl-textfield__input" type="password" id="old_password">
+                      <label class="mdl-textfield__label" for="sample1">Old password...</label>
+                    </div>
+                  </form>
+                </div>
+                <div class="input-profile">
+                  <form class="input-profile" action="#">
+                    <div class="mdl-textfield mdl-js-textfield">
+                      <input class="mdl-textfield__input" type="password" id="new_password">
+                      <label class="mdl-textfield__label" for="sample1">New password...</label>
+                    </div>
+                  </form>
+                </div>
+                <div class="mdl-layout-spacer"></div>
+                <div class="input-profile">
+                  <form class="input-profile" action="#">
+                    <div class="mdl-textfield mdl-js-textfield">
+                      <input class="mdl-textfield__input" type="password" id="repeat_password">
+                      <label class="mdl-textfield__label" for="sample1">Repeat password...</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </div>
