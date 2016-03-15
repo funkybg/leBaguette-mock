@@ -234,3 +234,6 @@ path {
 .mdl-card {
   height: 100%;
 }
+.mdl-typography--title {
+  font-size: 17px;
+}
