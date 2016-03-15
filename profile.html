@@ -1,0 +1,87 @@
+<!doctype html>
+<!--
+Material Design Lite
+Copyright 2015 Google Inc. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Lebaguette - Home">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lebaguette - Profile</title>
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="../static/images/android-desktop.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+  <link rel="apple-touch-icon-precomposed" href="../static/images/ios-desktop.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="../static/images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#3372DF">
+
+  <link rel="shortcut icon" href="../static/images/favicon.png">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.cyan-light_blue.min.css">
+  <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+  <div class="layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <header class="header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Server status</span>
+        <div class="mdl-layout-spacer"></div>
+        <label id="logout" class="mdl-button mdl-js-button mdl-button--icon" for="search">
+          <a href="/logout"><i class="material-icons">power_settings_new</i></a>
+        </label>
+        <div class="mdl-tooltip" for="logout">
+          Bye bye
+        </div>
+      </div>
+    </header>
+    <div class="drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+      <header class="drawer-header">
+        <span class="mdl-layout-title">Welcome</span>
+        <div class="mdl-layout-spacer"></div>
+        <img src="../static/images/ninja.png" class="avatar">
+        <div>
+          <span>{{ request.user.first_name }} {{ request.user.last_name }}</span>
+        </div>
+      </header>
+      <nav class="navigation mdl-navigation mdl-color--blue-grey-800">
+        <a class="mdl-navigation__link" href="/plex"><i class="material-icons" role="presentation">movie</i>Plex</a>
+        <a class="mdl-navigation__link" href="/owncloud"><i class="material-icons" role="presentation">backup</i>OwnCloud</a>
+        <a class="mdl-navigation__link" href="/transmission"><i class="material-icons" role="presentation">file_download</i>Transmission</a>
+        <div class="mdl-layout-spacer"></div>
+        <a class="mdl-navigation__link" href=""><i class="material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content mdl-color--grey-100">
+      <div class="mdl-grid container">
+
+      </div>
+    </main>
+  </div>
+  <script type = "text/javascript" src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</body>
+</html>
