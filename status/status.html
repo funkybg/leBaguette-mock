@@ -50,8 +50,6 @@ limitations under the License
       <div class="mdl-layout__header-row">
         <span class="mdl-layout-title">Server status</span>
         <div class="mdl-layout-spacer"></div>
-        <span class="mdl-layout-title">Uptime: {{ request.uptime }}</span>
-        <div class="mdl-layout-spacer"></div>
         <label id="logout" class="mdl-button mdl-js-button mdl-button--icon" for="search">
           <a href="/logout"><i class="material-icons">power_settings_new</i></a>
         </label>
@@ -74,6 +72,7 @@ limitations under the License
         <a class="mdl-navigation__link" href="/owncloud"><i class="material-icons" role="presentation">backup</i>OwnCloud</a>
         <a class="mdl-navigation__link" href="/transmission"><i class="material-icons" role="presentation">file_download</i>Transmission</a>
         <div class="mdl-layout-spacer"></div>
+        <span class="mdl-layout-title">Uptime: {{ request.uptime }}</span>
         <a class="mdl-navigation__link" href=""><i class="material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
       </nav>
     </div>
